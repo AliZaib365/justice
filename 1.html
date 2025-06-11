@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Justice Corner - Expert Team</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styles */
+    .expert-team-section {
+      width: 100%;
+      background: #fff;
+      padding: 0 0 40px 0;
+    }
+
+    .expert-team-heading {
+      text-align: center;
+      margin-top: 32px;
+      margin-bottom: 28px;
+    }
+
+    .expert-team-heading h2 {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #191c26;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .heading-underline {
+      width: 42px;
+      height: 6px;
+      margin: 0 auto;
+      margin-top: -4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .heading-underline span {
+      display: block;
+      width: 38px;
+      height: 4px;
+      border-radius: 4px;
+      background: #145c53;
+    }
+
+    .expert-team-card-row {
+      max-width: 900px;
+      margin: 0 auto;
+      background: none;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 0;
+      position: relative;
+    }
+
+    .expert-team-card-image {
+      flex: 1 1 340px;
+      max-width: 390px;
+      background: #0e4746;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.10);
+      height: 488px;
+    }
+
+    .expert-team-card-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .expert-team-card-info {
+      flex: 2 1 420px;
+      background: #fff;
+      border-radius: 0 16px 16px 0;
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.10);
+      padding: 38px 38px 32px 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .expert-name {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #191c26;
+      margin-bottom: 4px;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+    }
+
+    .expert-title {
+      font-size: 9px;
+      color: #707070;
+      letter-spacing: 1px;
+      font-weight: 600;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .expert-bio {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      font-size: 9px;
+      color: #222;
+      line-height: 1.64;
+    }
+
+    .expert-bio p {
+      margin-bottom: 12px;
+      margin-top: 0;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 900px) {
+      .expert-team-card-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      /* The utility class "q" forces reverse column order when needed */
+      .expert-team-card-row.q {
+        flex-direction: column-reverse;
+      }
+      
+      .expert-team-card-image,
+      .expert-team-card-info {
+        border-radius: 16px !important;
+        max-width: 100%;
+      }
+      
+      .expert-team-card-info {
+        padding: 30px 14px 22px 14px;
+      }
+      
+      .expert-team-card-image {
+        min-height: 0;
+        margin-bottom: 16px;
+      }
+      
+      .expert-team-card-image img {
+        height: auto;
+      }
+      
+      .expert-team-heading h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .expert-team-heading h2 {
+        font-size: 24px;
+      }
+      
+      .expert-team-card-info {
+        padding: 20px 10px;
+      }
+      
+      .expert-name {
+        font-size: 18px;
+      }
+      
+      .expert-title {
+        font-size: 8px;
+      }
+      
+      .expert-bio {
+        font-size: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="expert-team-section">
+    <div class="expert-team-heading">
+      <h2>Our Expert Team</h2>
+      <div class="heading-underline">
+        <span></span>
+      </div>
+    </div>
+    <div class="expert-team-card-row">
+      <div class="expert-team-card-image">
+        <img src="https://justicecornerbd.com/wp-content/uploads/2025/03/5K-Resources-2-480x600.png" alt="Expert Photo">
+      </div>
+      <div class="expert-team-card-info">
+        <h3 class="expert-name">BARRISTER MD. IMAM HOSSAIN TAREQ</h3>
+        <div class="expert-title">HEAD OF THE CHAMBER</div>
+        <div class="expert-bio">
+          <p>
+            Mr. Hossain is the head of the chamber and is an Advocate of the Supreme Court of Bangladesh. He enrolled as an Advocate of the District Court in 2003 and has had the opportunity to work as a senior associate of Huq and Company, Barristers and Advocates headed by Barrister Rafique-ul Huq, Senior Advocate, Supreme Court of Bangladesh and former Attorney General of Bangladesh. Mr. Tareq worked in close collaboration with Mr. Huq in one of the top law firms in Bangladesh for more than 10 years and represented numerous local and international clients.
+          </p>
+          <p>
+            Mr. Hossain successfully represented Energy Prima Limited against the Bangladesh Power Development Board in an arbitration of a contractual dispute and also successfully represented Mrs. Rowshan Ara in another arbitration against Lafarge Surma Cement Limited in a rental dispute.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="expert-team-section">
+    <div class="expert-team-heading">
+      <span></span>
+    </div>
+    <div class="expert-team-card-row q">
+      <div class="expert-team-card-info">
+        <h3 class="expert-name">ADV. SAIMA SULTANA</h3>
+        <div class="expert-title">Deputy Attorney General for Bangladesh</div>
+        <div class="expert-bio">
+          <p>
+            Mrs. Saima Sultana started her career in the Supreme Court of Bangladesh as a junior associate of Khandaker Mahabub Uddin & Associates. Now, she is the deputy attorney general for Bangladesh. She has immense experience in civil and criminal litigation. Her expertise includes property litigation, bail, deed reference, criminal appeal, and divorce matters.
+          </p>
+        </div>
+      </div>
+      <div class="expert-team-card-image">
+        <img src="https://justicecornerbd.com/wp-content/uploads/2025/03/5K-Resources-3-480x600.png" alt="Expert Photo">
+      </div>
+    </div>
+  </section>
+  <section class="expert-team-section">
+    <div class="expert-team-heading"></div>
+    <div class="expert-team-card-row">
+      <div class="expert-team-card-image">
+        <img src="https://justicecornerbd.com/wp-content/uploads/2025/03/5K-Resources-5-1-480x600.png" alt="Expert Photo">
+      </div>
+      <div class="expert-team-card-info">
+        <h3 class="expert-name">BARRISTER OMAR CHOWDHURY</h3>
+        <div class="expert-title">BARRISTER-AT LAW OF LINCOLN’S INN</div>
+        <div class="expert-bio">
+          <p>
+            Mr. Omar is an experienced Barrister-at-Law of Lincoln’s Inn and Advocate of the Supreme Court of Bangladesh with a demonstrated history of working in the law practice industry. He has had the opportunity to work as a Senior Associate of Huq and Company, Barristers and Advocates headed by Barrister Rafique-ul Huq, Learned Senior Advocate, Supreme Court of Bangladesh, and former Attorney General of Bangladesh. He is specialized in Company and Commercial Law, Banking and Insurance Law, Constitutional and Administrative Laws, Sports Laws, Construction Law, Arbitration and Mediation, Intellectual Property Law, Admiralty/Maritime Law, Environment Law, Family matters, and laws related to security documentation, loan syndication, project finance, law relating to letters of credit, and lease finance including consumer credit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="expert-team-section">
+    <div class="expert-team-heading">
+      <span></span>
+    </div>
+    <div class="expert-team-card-row q">
+      <div class="expert-team-card-info">
+        <h3 class="expert-name">BARRISTER MUNA CHOWDHURY</h3>
+        <div class="expert-title">BARRISTER-AT LAW OF LINCOLN’S INN</div>
+        <div class="expert-bio">
+          <p>
+            Ms. Muna Chowdhury worked as a senior associate of Huq and Company, Barristers and Advocates led by Barrister Rafique-ul Huq, Senior Advocate of the Supreme Court of Bangladesh, and former Attorney General of Bangladesh. With over 10 years of experience at one of the top law firms in Bangladesh, she has represented numerous local and international clients.
+          </p>
+          <p>
+            Her expertise lies in commercial law, particularly in sports law arbitration and construction law adjudication. She is also an expert in Corporate and Commercial litigation and has extensive experience in resolving complex corporate disputes.
+          </p>
+        </div>
+      </div>
+      <div class="expert-team-card-image">
+        <img src="" alt="Expert Photo">
+      </div>
+    </div>
+  </section>
+  <section class="expert-team-section">
+    <div class="expert-team-card-row">
+      <div class="expert-team-card-image">
+        <img src="" alt="Expert Photo">
+      </div>
+      <div class="expert-team-card-info">
+        <h3 class="expert-name">BARRISTER YESMIN AKTER MIM</h3>
+        <div class="expert-title">HEAD OF THE CHAMBER</div>
+        <div class="expert-bio">
+          <p>
+            Mr. Hossain is the head of the chamber and an Advocate of the Supreme Court of Bangladesh. After enrolling as an Advocate of the District Court in 2003, he worked as a senior associate at Huq and Company, guided by Barrister Rafique-ul Huq, a Senior Advocate of the Supreme Court and former Attorney General of Bangladesh. Mr. Tareq collaborated closely with Mr. Huq for over a decade and has represented numerous prestigious clients.
+          </p>
+          <p>
+            He has successfully handled arbitration cases, including representing Energy Prima Limited in a contractual dispute and Mrs. Rowshan Ara in a rental arbitration against Lafarge Surma Cement Limited.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="expert-team-section">
+    <div class="expert-team-card-row q">
+      <div class="expert-team-card-info">
+        <h3 class="expert-name">ADV. MAHMUDA BEGUM (SHIULY)</h3>
+        <div class="expert-title">ADVOCATE OF THE SUPREME COURT OF BANGLADESH</div>
+        <div class="expert-bio">
+          <p>
+            Ms. Shiuly began her career under the mentorship of renowned lawyer Mr. Zahirul Islam Khan (Panna) and later served as a senior associate with him for 15 years before joining Justice Corner as a senior partner. Her impressive track record in both the District Judge Court and the Supreme Court of Bangladesh has earned her a stellar reputation.
+          </p>
+          <p>
+            Her commitment to justice and fairness, coupled with her expertise in complex legal matters, has made her a highly respected legal professional.
+          </p>
+        </div>
+      </div>
+      <div class="expert-team-card-image">
+        <img src="https://justicecornerbd.com/wp-content/uploads/2025/03/5K-Resources-6-2-480x600.png" alt="Expert Photo">
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
