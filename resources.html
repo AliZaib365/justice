@@ -13,23 +13,73 @@
   <nav class="navbar">
     <div class="navbar-left">
       <span class="logo">
-        <a href="index.html"></a>
-        <img
-          src="https://justicecornerbd.com/wp-content/uploads/2025/03/Untitled-design-19-1.png"
-          alt="Justice Corner Logo"
-        />
+        <a href="index.html">
+          <img
+            src="https://justicecornerbd.com/wp-content/uploads/2025/03/Untitled-design-19-1.png"
+            alt="Justice Corner Logo"
+          />
+        </a>
       </span>
     </div>
     <div class="navbar-center">
       <a href="expertise.html" class="navbar-link"
         ><span class="dropdown-arrow">&#9660;</span>EXPERTISE</a
       >
+      <div class="dropdown-menu expertise-dropdown">
+        <div class="expertise-dropdown-row">
+          <div class="expertise-dropdown-col">
+            <div class="expertise-dropdown-title">SECTORS</div>
+            <div class="expertise-dropdown-underline"></div>
+            <div class="expertise-dropdown-inner-row">
+              <ul class="expertise-dropdown-list">
+                <li>BANK & FINANCIAL INSTITUTIONS</li>
+                <li>AVIATION</li>
+                <li>MARITIME & SHIPPING</li>
+                <li>INSURANCE</li>
+                <li>REAL ESTATE</li>
+                <li>TEXTILE</li>
+                <li>SOCIAL CLUBS/ENTERTAINMENT</li>
+              </ul>
+              <ul class="expertise-dropdown-list">
+                <li>NGO’S</li>
+                <li>SOCIETIES</li>
+                <li>STARTUPS</li>
+                <li>TECHNOLOGY</li>
+                <li>SOFTWARE</li>
+                <li>MULTINATIONAL CORPORATIONS</li>
+              </ul>
+            </div>
+          </div>
+          <div class="expertise-dropdown-col">
+            <div class="expertise-dropdown-title">PRACTICE AREAS</div>
+            <div class="expertise-dropdown-underline"></div>
+            <div class="expertise-dropdown-inner-row">
+              <ul class="expertise-dropdown-list">
+                <li>ADMIRALTY & SHIPPING LAW</li>
+                <li>CONSTITUTIONAL & ADMINISTRATIVE LAW</li>
+                <li>MERGERS & ACQUISITIONS (M&A)</li>
+                <li>LAND, TENANCY & PROPERTY LAW</li>
+                <li>EMPLOYMENT LAW</li>
+                <li>CRIMINAL LAW</li>
+                <li>INTELLECTUAL PROPERTY LAW</li>
+              </ul>
+              <ul class="expertise-dropdown-list">
+                <li>CUSTOMS, VAT & INCOME TAX LAW</li>
+                <li>CAPITAL MARKETS & SECURITIES</li>
+                <li>JUDICIAL REVIEW (WRIT) & WAQF ORDINANCE</li>
+                <li>COMPANY, CORPORATE & BANKING LAW</li>
+                <li>ARBITRATION & MEDIATION</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
       <a href="resources.html" class="navbar-link">RESOURCES</a>
       <a href="team.html" class="navbar-link">TEAM</a>
       <a href="about.html" class="navbar-link">ABOUT</a>
     </div>
     <div class="navbar-right">
-      <button class="consult-btn">Free Legal Consultation</button>
+      <button class="consult-btn" onclick="window.location.href='booking.html'">Free Legal Consultation</button>
       <div class="menu-icon" id="menuToggle" aria-label="Open menu" tabindex="0">
         <div class="menu-bar"></div>
         <div class="menu-bar"></div>
@@ -135,7 +185,7 @@
       />
     </div>
     <!-- The mobile consult button remains in this position -->
-    <button class="mobile-consult-btn">Free Legal Consultation</button>
+    <button class="consult-btn" onclick="window.location.href='booking.html'">Free Legal Consultation</button>
     <div
       class="mobile-menu-icon"
       id="mobileMenuToggle"

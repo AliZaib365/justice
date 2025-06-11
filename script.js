@@ -73,175 +73,78 @@ document.addEventListener('DOMContentLoaded', function () {
   onScroll();
 });
 
-// SIDEBAR
-const menuToggle = document.getElementById('menuToggle');
-const sidebar = document.getElementById('sidebar');
-const closeSidebar = document.getElementById('closeSidebar');
-const sidebarOverlay = document.getElementById('sidebarOverlay');
-
-// Open sidebar
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+const closeSidebar = document.getElementById("closeSidebar");
+const sidebarOverlay = document.getElementById("sidebarOverlay");
 function openSidebar() {
-  sidebar.classList.add('open');
+  sidebar.classList.add("open");
   sidebarOverlay.style.display = "block";
   document.body.style.overflow = "hidden";
 }
-// Close sidebar
 function closeSidebarFn() {
-  sidebar.classList.remove('open');
+  sidebar.classList.remove("open");
   sidebarOverlay.style.display = "none";
   document.body.style.overflow = "";
 }
-
-// Click events
-menuToggle.addEventListener('click', openSidebar);
-menuToggle.addEventListener('keydown', e => {
-  if (e.key === "Enter" || e.key === " ") openSidebar();
-});
-closeSidebar.addEventListener('click', closeSidebarFn);
-sidebarOverlay.addEventListener('click', closeSidebarFn);
-
-// ESC key closes sidebar
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && sidebar.classList.contains('open')) {
+if (menuToggle)
+  menuToggle.addEventListener("click", openSidebar);
+if (menuToggle)
+  menuToggle.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") openSidebar();
+  });
+if (closeSidebar) closeSidebar.addEventListener("click", closeSidebarFn);
+if (sidebarOverlay)
+  sidebarOverlay.addEventListener("click", closeSidebarFn);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && sidebar.classList.contains("open"))
     closeSidebarFn();
-  }
 });
 
-// Play button hide for "about-tjc-play-btn" element
-document.querySelector('.about-tjc-play-btn').addEventListener('click', function() {
-  this.style.display = 'none';
+// Mobile Sidebar Logic
+const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+const mobileSidebar = document.getElementById("mobileSidebar");
+const closeMobileSidebar = document.getElementById("closeMobileSidebar");
+const mobileSidebarOverlay = document.getElementById(
+  "mobileSidebarOverlay"
+);
+function openMobileSidebar() {
+  mobileSidebar.classList.add("open");
+  mobileSidebarOverlay.style.display = "block";
+  document.body.style.overflow = "hidden";
+}
+function closeMobileSidebarFn() {
+  mobileSidebar.classList.remove("open");
+  mobileSidebarOverlay.style.display = "none";
+  document.body.style.overflow = "";
+}
+if (mobileMenuToggle)
+  mobileMenuToggle.addEventListener("click", openMobileSidebar);
+if (closeMobileSidebar)
+  closeMobileSidebar.addEventListener("click", closeMobileSidebarFn);
+if (mobileSidebarOverlay)
+  mobileSidebarOverlay.addEventListener("click", closeMobileSidebarFn);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && mobileSidebar.classList.contains("open"))
+    closeMobileSidebarFn();
 });
-
-// EXPERT TEAM SLIDER
-document.addEventListener('DOMContentLoaded', function () {
-  const expertSection = document.querySelector('.jc-expert-team-section');
-  if (!expertSection) return; // Exit if section not found
-
-  const slider = expertSection.querySelector('.jc-expert-team-slider');
-  const slides = expertSection.querySelectorAll('.jc-expert-team-slide');
-  const dotsContainer = expertSection.querySelector('.jc-expert-team-slider-dots');
-  const dots = Array.from(dotsContainer.querySelectorAll('.jc-expert-team-dot')); 
-  const leftArrow = expertSection.querySelector('.jc-expert-team-slider-arrow-left');
-  const rightArrow = expertSection.querySelector('.jc-expert-team-slider-arrow-right');
-
-  let currentIndex = 0;
-  let slideInterval;
-  const slideDuration = 5000; // 5 seconds
-  let isPaused = false;
-
-  // Calculate how many slides to show based on screen width
-  function getSlidesToShow() {
-    if (window.innerWidth < 576) return 1;
-    if (window.innerWidth < 1024) return 2;
-    return 3;
-  }
-
-  // Update slider position and dot states
-  function updateSlider() {
-    const slidesToShow = getSlidesToShow();
-    const slideWidth = slides[0].offsetWidth + 20; // width + gap
-    const newPosition = -currentIndex * slideWidth;
-    slider.style.transform = `translateX(${newPosition}px)`;
-
-    // Calculate total groups (number of positions)
-    const totalGroups = slides.length - slidesToShow + 1;
-    // Adjust dots: show only for available groups and update active states
-    dots.forEach((dot, index) => {
-      if (index < totalGroups) {
-        dot.style.display = "inline-block";
-        dot.classList.toggle('active', index === currentIndex);
-      } else {
-        dot.style.display = "none";
-      }
-    });
-  }
-
-  // Go to specific slide
-  function goToSlide(index) {
-    const slidesToShow = getSlidesToShow();
-    const maxIndex = slides.length - slidesToShow;
-    currentIndex = Math.max(0, Math.min(index, maxIndex));
-    updateSlider();
-  }
-
-  // Next slide
-  function nextSlide() {
-    const slidesToShow = getSlidesToShow();
-    if (currentIndex < slides.length - slidesToShow) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-    }
-    updateSlider();
-  }
-
-  // Previous slide
-  function prevSlide() {
-    const slidesToShow = getSlidesToShow();
-    if (currentIndex > 0) {
-      currentIndex--;
-    } else {
-      currentIndex = slides.length - slidesToShow;
-    }
-    updateSlider();
-  }
-
-  // Start auto sliding
-  function startAutoSlide() {
-    slideInterval = setInterval(() => {
-      if (!isPaused) nextSlide();
-    }, slideDuration);
-  }
-
-  // Pause auto sliding when hovering over slider
-  slider.addEventListener('mouseenter', () => {
-    isPaused = true;
+// Dropdown logic for mobile
+function setupDropdown(dropdownId, listId) {
+  const btn = document.getElementById(dropdownId);
+  const list = document.getElementById(listId);
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    btn.classList.toggle("open");
+    list.style.display =
+      list.style.display === "flex" ? "none" : "flex";
   });
-  slider.addEventListener('mouseleave', () => {
-    isPaused = false;
-  });
-
-  // Arrow controls
-  leftArrow.addEventListener('click', () => {
-    prevSlide();
-    resetAutoSlide();
-  });
-  rightArrow.addEventListener('click', () => {
-    nextSlide();
-    resetAutoSlide();
-  });
-
-  // Dot controls
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      goToSlide(index);
-      resetAutoSlide();
-    });
-  });
-
-  // Reset auto slide timer
-  function resetAutoSlide() {
-    clearInterval(slideInterval);
-    startAutoSlide();
-  }
-
-  // Handle window resize
-  window.addEventListener('resize', () => {
-    updateSlider();
-  });
-
-  // Initialize
-  updateSlider();
-  startAutoSlide();
-
-  // Add keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') {
-      prevSlide();
-      resetAutoSlide();
-    } else if (e.key === 'ArrowRight') {
-      nextSlide();
-      resetAutoSlide();
+  btn.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      btn.classList.toggle("open");
+      list.style.display =
+        list.style.display === "flex" ? "none" : "flex";
     }
   });
-});
+}
+setupDropdown("practiceDropdown", "practiceDropdownList");
+setupDropdown("sectorsDropdown", "sectorsDropdownList");
