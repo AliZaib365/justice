@@ -6629,7 +6629,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-height: 100vh;
+  min-height: 70vh;
   background: #fff;
   font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
 }
