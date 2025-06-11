@@ -3303,9 +3303,7 @@ flex-direction: column-reverse;
   transition: box-shadow 0.2s;
 }
 
-.contact-hero-img-bubble.right {
-  /* background: #ffc43a; */
-}
+
 
 .contact-hero-img-bubble img {
   width: 250px;
