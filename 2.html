@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Insights Hero Responsive</title>
+  <style>
+    .legal-insights-hero-section {
+      width: 100%;
+      min-height: 540px;
+      background: #0e4746;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .legal-insights-hero-inner {
+      width: 100%;
+      max-width: 1420px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 70px 44px 40px 54px;
+      position: relative;
+      z-index: 2;
+    }
+    .legal-insights-hero-left {
+      flex: 1 1 700px;
+      min-width: 320px;
+      z-index: 2;
+    }
+    .legal-insights-hero-title {
+      font-size: 64px;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 15px 0;
+      line-height: 1.05;
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    }
+    .legal-insights-hero-desc {
+      color: #eaf3f3;
+      font-size: 18px;
+      margin-bottom: 32px;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      max-width: 680px;
+    }
+    .legal-insights-hero-search-form {
+      display: flex;
+      align-items: center;
+      width: 420px;
+      max-width: 96vw;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid #e5ecee;
+      margin-top: 10px;
+    }
+    .legal-insights-hero-search-input {
+      flex: 1 1 0;
+      border: none;
+      background: transparent;
+      font-size: 18px;
+      padding: 15px 18px;
+      color: #222;
+      outline: none;
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    }
+    .legal-insights-hero-search-btn {
+      background: #fff;
+      border: none;
+      padding: 0 18px;
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border-left: 1.5px solid #e5ecee;
+      transition: background 0.13s;
+    }
+    .legal-insights-hero-search-btn svg {
+      display: block;
+    }
+    .legal-insights-hero-search-btn:hover {
+      background: #f5f9f9;
+    }
+    .legal-insights-hero-right {
+      flex: 1 1 500px;
+      min-width: 240px;
+      min-height: 410px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .legal-insights-hero-img-circle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 420px;
+      height: 420px;
+      background: #fff;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    .legal-insights-hero-img {
+      position: relative;
+      z-index: 2;
+      width: 410px;
+      max-width: 85vw;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 1150px) {
+      .legal-insights-hero-inner {
+        flex-direction: column;
+        padding: 34px 5vw 28px 5vw;
+      }
+      .legal-insights-hero-left,
+      .legal-insights-hero-right {
+        width: 100%;
+        min-width: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .legal-insights-hero-title {
+        font-size: 38px;
+      }
+      .legal-insights-hero-desc {
+        font-size: 16px;
+      }
+      .legal-insights-hero-img-circle {
+        width: 250px;
+        height: 250px;
+      }
+      .legal-insights-hero-img {
+        width: 230px;
+        max-width: 70vw;
+      }
+      .legal-insights-hero-search-form {
+        width: 77vw;
+        max-width: 490px;
+        margin: 0 auto;
+      }
+      .legal-insights-hero-section {
+        min-height: 0;
+      }
+    }
+    @media (max-width: 700px) {
+      .legal-insights-hero-inner {
+        height: auto;
+        padding: 10vw 2vw 10vw 2vw;
+      }
+      .legal-insights-hero-title {
+        font-size: 22px;
+      }
+      .legal-insights-hero-desc {
+        font-size: 13px;
+      }
+      .legal-insights-hero-img-circle {
+        width: 110px;
+        height: 110px;
+      }
+      .legal-insights-hero-img {
+        width: 110px;
+        max-width: 80vw;
+      }
+      .legal-insights-hero-search-input {
+        font-size: 12px;
+        padding: 8px 8px;
+      }
+      .legal-insights-hero-search-btn {
+        padding: 0 7px;
+      }
+      .legal-insights-hero-search-form {
+        border-radius: 5px;
+        width: 97vw;
+        max-width: 97vw;
+      }
+    }
+    @media (max-width: 480px) {
+      .legal-insights-hero-inner {
+        padding: 3vw 2vw 7vw 2vw;
+      }
+      .legal-insights-hero-title {
+        font-size: 17px;
+      }
+      .legal-insights-hero-desc {
+        font-size: 11px;
+      }
+      .legal-insights-hero-img-circle {
+        width: 70px;
+        height: 70px;
+      }
+      .legal-insights-hero-img {
+        width: 70px;
+      }
+      .legal-insights-hero-search-form {
+        border-radius: 4px;
+        width: 99vw;
+        max-width: 99vw;
+      }
+      .legal-insights-hero-search-input {
+        font-size: 11px;
+        padding: 7px 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="legal-insights-hero-section">
+    <div class="legal-insights-hero-inner">
+      <div class="legal-insights-hero-left">
+        <h1 class="legal-insights-hero-title">
+          Legal Made Simple —<br>
+          Insights, Advice &amp;<br>
+          Updates!
+        </h1>
+        <p class="legal-insights-hero-desc">
+          We break down complex legal topics into easy-to-understand insights, keeping you informed about your rights, legal updates, and expert advice. Whether you’re looking for guidance on business law, family matters, or legal best practices for best law firm in bd, our blog is your go-to resource.
+        </p>
+        <form class="legal-insights-hero-search-form">
+          <input type="text" class="legal-insights-hero-search-input" placeholder="Search for legal advice..." />
+          <button type="submit" class="legal-insights-hero-search-btn" aria-label="Search">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <circle cx="11" cy="11" r="8" stroke="#145c53" stroke-width="2"/>
+              <path d="M21 21l-4.35-4.35" stroke="#145c53" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="legal-insights-hero-right">
+        <div class="legal-insights-hero-img-circle"></div>
+        <img src="https://justicecornerbd.com/wp-content/uploads/2025/03/Untitled-design-2025-03-23T131959.990.png" alt="Legal Advice Hero" class="legal-insights-hero-img" />
+      </div>
+    </div>
+  </section>
+</body>
+</html>
